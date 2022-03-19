@@ -14,11 +14,13 @@ function playRound(computerSelection, playerSelection) {
       } else if (playerSelection == "paper") {
         console.log("You win!");
         return "You win!";
-      } else {
+      } else if (playerSelection == "scissors") {
         console.log("You lose!");
         return "You lose!";
+      } else {
+        console.log("invalid user entry!")
+        return "You fucked up!"
       }
-      break;
     case "paper":
       if (playerSelection == "rock") {
         console.log("You lose!");
@@ -26,11 +28,13 @@ function playRound(computerSelection, playerSelection) {
       } else if (playerSelection == "paper") {
         console.log("You tie!");
         return "You tie!";
-      } else {
+      } else if (playerSelection == "scissors"){
         console.log("You win!");
         return "You win!";
+      } else {
+        console.log("invalid user entry!")
+        return "You fucked up!"
       }
-      break;
     case "scissors":
       if (playerSelection == "rock") {
         console.log("You win!");
@@ -38,12 +42,16 @@ function playRound(computerSelection, playerSelection) {
       } else if (playerSelection == "paper") {
         console.log("You lose!");
         return "You lose!";
-      } else {
+      } else if (playerSelection == "scissors"){
         console.log("You tie!");
         return "You tie!";
+      } else {
+        console.log("invalid user entry!")
+        return "You fucked up!"
       }
-      break;
-
+    default:
+      console.log("invalid user entry!")
+      return "You fucked up!"
   }
 
 }
@@ -51,3 +59,14 @@ function playRound(computerSelection, playerSelection) {
 const computerSelection = computerPlay();
 const playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
 
+
+// console.log(playRound(computerSelection, playerSelection));
+
+
+function game() {
+  for (let index = 0; index < 5; index++) {
+    playRound(computerSelection, playerSelection);
+    
+  }
+  
+}
