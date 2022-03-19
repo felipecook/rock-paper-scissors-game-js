@@ -28,7 +28,7 @@ function playRound(computerSelection, playerSelection) {
       } else if (playerSelection == "paper") {
         console.log("You tie!");
         return "You tie!";
-      } else if (playerSelection == "scissors"){
+      } else if (playerSelection == "scissors") {
         console.log("You win!");
         return "You win!";
       } else {
@@ -42,7 +42,7 @@ function playRound(computerSelection, playerSelection) {
       } else if (playerSelection == "paper") {
         console.log("You lose!");
         return "You lose!";
-      } else if (playerSelection == "scissors"){
+      } else if (playerSelection == "scissors") {
         console.log("You tie!");
         return "You tie!";
       } else {
@@ -56,17 +56,18 @@ function playRound(computerSelection, playerSelection) {
 
 }
 
-const computerSelection = computerPlay();
-const playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
-
 
 // console.log(playRound(computerSelection, playerSelection));
 
 
 function game() {
   for (let index = 0; index < 5; index++) {
-    playRound(computerSelection, playerSelection);
-    
+    const computerSelection = computerPlay();
+    const playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
+
+
+    console.log(playRound(computerSelection, playerSelection));
+
   }
-  
+
 }
