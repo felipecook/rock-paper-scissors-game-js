@@ -61,13 +61,25 @@ function playRound(computerSelection, playerSelection) {
 
 
 function game() {
+  const wins = 0;
   for (let index = 0; index < 5; index++) {
     const computerSelection = computerPlay();
     const playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
+    const winOrLose = playRound(computerSelection,playerSelection);
+    if (winOrLose == "You win!"){
+      wins++;
 
+    }
 
-    console.log(playRound(computerSelection, playerSelection));
+    // console.log(playRound(computerSelection, playerSelection));
+    
 
   }
+  if (wins >= 3) {
+    console.log(`You won ${wins} games, nice job!`)
+  } else {
+    console.log("Better luck next time!")
+  }
+
 
 }
