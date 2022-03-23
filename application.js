@@ -76,7 +76,7 @@ function game() {
 
   }
   if (wins >= 3) {
-    console.log(`You won ${wins} games, nice job!`)
+    console.log(`You won ${wins} games, the majority, nice job!`)
   } else {
     console.log("Better luck next time!")
   }
