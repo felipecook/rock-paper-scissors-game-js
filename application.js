@@ -1,3 +1,25 @@
+// const rock = document.querySelector('#rock');
+// const paper = document.querySelector('#paper');
+// const scissors = document.querySelector('scissors');
+
+// rock.addEventListener('click', game);
+// paper.addEventListener('click', game);
+// scissors.addEventListener('click', game);
+
+const buttons = document.querySelectorAll('button');
+
+console.log(buttons);
+
+buttons.forEach((button) => {
+
+  button.addEventListener('click', () => {
+    console.log(button.id);
+    game(button.id);
+  });
+});
+
+
+
 function computerPlay() {
   const arr = ["rock", "paper", "scissors"];
   let choice = Math.floor(Math.random() * (3 - 0) + 0);
@@ -62,19 +84,19 @@ function playRound(computerSelection, playerSelection) {
 
 function game() {
   const wins = 0;
-  for (let index = 0; index < 5; index++) {
-    const computerSelection = computerPlay();
-    const playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
-    const winOrLose = playRound(computerSelection,playerSelection);
-    if (winOrLose == "You win!"){
-      wins++;
 
-    }
-
-    // console.log(playRound(computerSelection, playerSelection));
-    
+  const computerSelection = computerPlay();
+  const playerSelection = document.querySelector("#");
+  const winOrLose = playRound(computerSelection, playerSelection);
+  if (winOrLose == "You win!") {
+    wins++;
 
   }
+
+  // console.log(playRound(computerSelection, playerSelection));
+
+
+
   if (wins >= 3) {
     console.log(`You won ${wins} games, the majority, nice job!`)
   } else {
