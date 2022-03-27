@@ -6,6 +6,7 @@
 // paper.addEventListener('click', game);
 // scissors.addEventListener('click', game);
 
+let wins = 0;
 const buttons = document.querySelectorAll('button');
 
 console.log(buttons);
@@ -82,13 +83,13 @@ function playRound(computerSelection, playerSelection) {
 // console.log(playRound(computerSelection, playerSelection));
 
 
-function game() {
-  const wins = 0;
-
+function game(playerSelection) {
+  
   const computerSelection = computerPlay();
-  const playerSelection = document.querySelector("#");
+  
   const winOrLose = playRound(computerSelection, playerSelection);
   if (winOrLose == "You win!") {
+    console.log(wins);
     wins++;
 
   }
