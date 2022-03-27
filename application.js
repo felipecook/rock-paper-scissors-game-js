@@ -9,6 +9,7 @@
 let wins = 0;
 const buttons = document.querySelectorAll('button');
 const scoreDisplay = document.querySelector("#scoreDisplay");
+const computerSelectionDisplay = document.querySelector("#computerSelection");
 
 
 console.log(buttons);
@@ -88,9 +89,11 @@ function playRound(computerSelection, playerSelection) {
 
 
 function game(playerSelection) {
-  scoreDisplay.textContent = `You have won ${wins} games.`
-  const computerSelection = computerPlay();
+  scoreDisplay.textContent = `You have won ${wins} games.`;
   
+
+  const computerSelection = computerPlay();
+  computerSelectionDisplay.textContent = `Computer selected ${computerSelection}`;
   const winOrLose = playRound(computerSelection, playerSelection);
   if (winOrLose == "You win!") {
     console.log(wins);
