@@ -8,6 +8,8 @@
 
 let wins = 0;
 const buttons = document.querySelectorAll('button');
+const scoreDisplay = document.querySelector("#scoreDisplay");
+
 
 console.log(buttons);
 
@@ -18,6 +20,8 @@ buttons.forEach((button) => {
     game(button.id);
   });
 });
+
+
 
 
 
@@ -84,13 +88,14 @@ function playRound(computerSelection, playerSelection) {
 
 
 function game(playerSelection) {
-  
+  scoreDisplay.textContent = `You have won ${wins} games.`
   const computerSelection = computerPlay();
   
   const winOrLose = playRound(computerSelection, playerSelection);
   if (winOrLose == "You win!") {
     console.log(wins);
     wins++;
+    
 
   }
 
@@ -106,3 +111,4 @@ function game(playerSelection) {
 
 
 }
+
