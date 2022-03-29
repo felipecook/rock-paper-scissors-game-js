@@ -19,10 +19,21 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     console.log(button.id);
     game(button.id);
+    button.classList.add('playing');
   });
 });
 
+buttons.forEach(button => {
 
+  button.addEventListener('transitionend', removeTransition)
+});
+
+function removeTransition(e){
+  console.log(e);
+  if(e.propertyName != 'transform') return;
+
+  this.classList.remove('playing');
+}
 
 
 

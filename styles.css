@@ -2,11 +2,19 @@
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 30px;
 }
 
 
 button {
   width: 200px;
   height: 200px;
+  transition: all .07s ease;
+
+}
+
+.playing {
+  transform: scale(1.1);
 }
