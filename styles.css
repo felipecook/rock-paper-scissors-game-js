@@ -30,7 +30,18 @@ button {
 
 #score {
   display: flex;
+  flex-direction: column;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 20px;
+}
+
+#playerScoreDisplay {
+  flex: 1;
+}
+
+#computerScoreDisplay {
+  flex: 1;
 }
