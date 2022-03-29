@@ -127,9 +127,11 @@ function game(playerSelection) {
 
 
   if (playerWins == 5) {
-    prompt(`You won ${playerWins} games, the majority, nice job!`);
-  } else {
-    console.log("Better luck next time!");
+    alert(`You won ${playerWins} games, the majority, nice job!`);
+  } 
+
+  if (computerWins == 5) {
+    alert(`The computer won ${computerWins} games, the majority, too bad!`);
   }
 
 
