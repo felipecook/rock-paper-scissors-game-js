@@ -102,8 +102,7 @@ function playRound(computerSelection, playerSelection) {
 
 
 function game(playerSelection) {
-  playerScoreDisplay.textContent = `You have won ${playerWins} games.`;
-  computerScoreDisplay.textContent = `The computer has won ${computerWins} games.`;
+  
 
 
   
@@ -112,13 +111,16 @@ function game(playerSelection) {
   computerSelectionDisplay.textContent = `Computer selected ${computerSelection}`;
   const winOrLose = playRound(computerSelection, playerSelection);
   if (winOrLose == "You win!") {
-    console.log(wins);
+    console.log(playerWins);
     playerWins++;
     
 
   } else if (winOrLose == "You lose!") {
     computerWins++;
   }
+
+  playerScoreDisplay.textContent = `You have won ${playerWins} games.`;
+  computerScoreDisplay.textContent = `The computer has won ${computerWins} games.`;
 
   // console.log(playRound(computerSelection, playerSelection));
 
