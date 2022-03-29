@@ -1,3 +1,8 @@
+body {
+  background: lightgrey;
+}
+
+
 .playerSelectionContainer {
   display: flex;
   flex: 1;
@@ -17,6 +22,7 @@ button {
 
 .playing {
   transform: scale(1.1);
+  background-color: blue;
 }
 
 .computerSelectionContainer {
