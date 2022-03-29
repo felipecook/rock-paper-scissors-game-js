@@ -6,9 +6,11 @@
 // paper.addEventListener('click', game);
 // scissors.addEventListener('click', game);
 
-let wins = 0;
+let playerWins = 0;
+let computerWins = 0;
 const buttons = document.querySelectorAll('button');
-const scoreDisplay = document.querySelector("#scoreDisplay");
+const playerScoreDisplay = document.querySelector("#playerScoreDisplay");
+const computerScoreDisplay = document.querySelector("#computerScoreDisplay");
 const computerSelectionDisplay = document.querySelector("#computerSelection");
 
 
@@ -100,7 +102,10 @@ function playRound(computerSelection, playerSelection) {
 
 
 function game(playerSelection) {
-  scoreDisplay.textContent = `You have won ${wins} games.`;
+  playerScoreDisplay.textContent = `You have won ${playerWins} games.`;
+  computerScoreDisplay.textContent = `The computer has won ${computerWins} games.`;
+
+
   
 
   const computerSelection = computerPlay();
@@ -108,19 +113,21 @@ function game(playerSelection) {
   const winOrLose = playRound(computerSelection, playerSelection);
   if (winOrLose == "You win!") {
     console.log(wins);
-    wins++;
+    playerWins++;
     
 
+  } else if (winOrLose == "You lose!") {
+    computerWins++;
   }
 
   // console.log(playRound(computerSelection, playerSelection));
 
 
 
-  if (wins >= 3) {
-    console.log(`You won ${wins} games, the majority, nice job!`)
+  if (playerWins == 5) {
+    prompt(`You won ${playerWins} games, the majority, nice job!`);
   } else {
-    console.log("Better luck next time!")
+    console.log("Better luck next time!");
   }
 
 

@@ -18,3 +18,19 @@ button {
 .playing {
   transform: scale(1.1);
 }
+
+.computerSelectionContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background: lightblue;
+  height: auto;
+}
+
+#score {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
