@@ -23,12 +23,11 @@ buttons.forEach((button) => {
     game(button.id);
     button.classList.add('playing');
   });
-});
-
-buttons.forEach(button => {
 
   button.addEventListener('transitionend', removeTransition)
 });
+
+
 
 function removeTransition(e){
   console.log(e);
